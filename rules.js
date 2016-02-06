@@ -14,7 +14,7 @@ module.exports = function(styles) {
     autolink: {
       react: function(node, output, state) {
         state.withinText = true;
-        var pressHandler = function() { LinkingIOS.openUrl(node.target) };
+        var pressHandler = function() { LinkingIOS.openURL(node.target) };
         return React.createElement(Text, {
           key: state.key,
           style: styles.autolink,
@@ -101,7 +101,7 @@ module.exports = function(styles) {
     link: {
       react: function(node, output, state) {
         state.withinText = true;
-        var pressHandler = function() { LinkingIOS.openUrl(node.target) };
+        var pressHandler = function() { LinkingIOS.openURL(node.target) };
         return React.createElement(Text, {
           key: state.key,
           style: styles.autolink,
@@ -223,7 +223,7 @@ module.exports = function(styles) {
     url: {
       react: function(node, output, state) {
         state.withinText = true;
-        var pressHandler = function() { LinkingIOS.openUrl(node.target) };
+        var pressHandler = function() { LinkingIOS.openURL(node.target) };
 
         return React.createElement(Text, {
           key: state.key,
