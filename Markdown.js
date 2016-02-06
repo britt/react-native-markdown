@@ -6,6 +6,9 @@ var _ = require('lodash');
 var SimpleMarkdown = require('simple-markdown');
 
 var styles = {
+  autolink: {
+    color: 'blue'
+  },
   view: {
   },
   codeBlock: {

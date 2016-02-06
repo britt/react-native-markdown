@@ -3,7 +3,9 @@ var {
   Image,
   Text,
   View,
+  Linking
 } = React;
+
 var SimpleMarkdown = require('simple-markdown');
 var _ = require('lodash');
 
@@ -12,10 +14,11 @@ module.exports = function(styles) {
     autolink: {
       react: function(node, output, state) {
         state.withinText = true;
+        var pressHandler = function() { Linking.openUrl(node.target) };
         return React.createElement(Text, {
           key: state.key,
           style: styles.autolink,
-          onPress: _.noop
+          onPress: pressHandler
         }, output(node.content, state));
       }
     },
@@ -98,9 +101,11 @@ module.exports = function(styles) {
     link: {
       react: function(node, output, state) {
         state.withinText = true;
+        var pressHandler = function() { Linking.openUrl(node.target) };
         return React.createElement(Text, {
           key: state.key,
-          style: styles.autolink
+          style: styles.autolink,
+          onPress: pressHandler
         }, output(node.content, state));
       }
     },
@@ -218,10 +223,12 @@ module.exports = function(styles) {
     url: {
       react: function(node, output, state) {
         state.withinText = true;
+        var pressHandler = function() { Linking.openUrl(node.target) };
+
         return React.createElement(Text, {
           key: state.key,
-          style: styles.url,
-          onPress: _.noop
+          style: styles.autolink,
+          onPress: pressHandler
         }, output(node.content, state));
       }
     }

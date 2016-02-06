@@ -1,18 +1,14 @@
 # react-native-markdown
 
-A component for rendering Markdown in React Native. Pull requests welcome.
-
-## Known issues
-
-- Due to [a bug](https://github.com/facebook/react-native/issues/824) in underlying layout engine for React Native ([facebook/css-layout](https://github.com/facebook/css-layout)), this module will put your application in an infinite loop unless you patch the upstream changes from `css-layout`'s' `Layout.c` and `Layout.h` files.
+A component for rendering Markdown in React Native forked from Lochlan Wansbrough's react-native-markdown. This version opens links in Safari or Chrome.
 
 ## Getting started
 
-1. `npm install react-native-markdown --save`
+1. `npm install react-native-markdown-with-links --save`
 
 ## Usage
 
-All you need is to `require` the `react-native-markdown` module and then use the
+All you need is to `require` the `react-native-markdown-with-links` module and then use the
 `<Markdown/>` tag.
 
 ```javascript
@@ -22,7 +18,7 @@ var {
   StyleSheet,
   View
 } = React;
-var Markdown = require('react-native-markdown');
+var Markdown = require('react-native-markdown-with-links');
 
 var mdApp = React.createClass({
   render: function() {
@@ -63,7 +59,7 @@ Default style properties will be applied to the markdown. You will likely want t
 - `hr` (`<View>`)
 - `image` (`<Image>`) - Implemented but size is fixed to `50x50` until auto width is supported by React Native.
 - `inlineCode` (`<Text>`)
-- `link` (`<Text>`) - WIP
+- `link` (`<Text>`) - 
 - `list` (`<View>`) - Also `listItem` (`<View>`), `listItemBullet` (`<Text>`) and `listItemNumber` (`<Text>`)
 - `mailto` (`<Text>`) - WIP
 - `newline` (`<Text>`) - WIP

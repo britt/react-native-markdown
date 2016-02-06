@@ -1,19 +1,19 @@
 {
-  "name": "react-native-markdown",
+  "name": "react-native-markdown-with-links",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lwansbrough/react-native-markdown.git"
+    "url": "https://github.com/britt/react-native-markdown.git"
   },
-  "version": "0.1.1",
-  "description": "A component for rendering Markdown in React Native",
+  "version": "0.1.2",
+  "description": "A component for rendering Markdown in React Native forked from Lochlan Wansbrough's react-native-markdown. This version opens links in Safari or Chrome.",
   "main": "Markdown.js",
-  "author": "Lochlan Wansbrough <lochie@live.com> (http://lwansbrough.com)",
+  "author": "Britt Crawford <britt@illtemper.org> (http://brittcrawford.com)",
   "dependencies": {
     "lodash": "^3.6.0",
     "simple-markdown": "git://github.com/lwansbrough/simple-markdown.git"
   },
   "peerDependencies": {
-    "react-native": "*"
+    "react-native": "0.19.0"
   },
   "keywords": [
     "react",
