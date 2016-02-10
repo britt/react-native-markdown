@@ -110,7 +110,6 @@ var styles = {
     padding: 5
   },
   text: {
-    color: '#222222'
   },
   u: {
     borderColor: '#222222',
